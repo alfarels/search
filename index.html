@@ -1,0 +1,1649 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Portofolio | Tito Alfarel S</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS lama -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --grey-ink: #292929;
+      --grey-dark: #3b3b3b;
+      --grey-mid: #686868;
+      --grey-silver: #dedede;
+      --grey-light: #f4f4f4;
+      --grey-white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--grey-silver) !important;
+      color: var(--grey-ink) !important;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+
+    section {
+      scroll-margin-top: 72px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: rgba(45, 45, 45, .97) !important;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .navbar .nav-link {
+      color: #d8d8d8 !important;
+      margin-left: 7px;
+      transition: color .2s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ffffff !important;
+    }
+
+    /* HOME */
+    .jumbotron {
+      background: linear-gradient(
+        135deg,
+        #f5f5f5 0%,
+        #d5d5d5 55%,
+        #bdbdbd 100%
+      ) !important;
+      color: #292929 !important;
+      padding: 8rem 1rem 4.5rem !important;
+      margin-bottom: 0;
+      border-bottom: 1px solid #c4c4c4;
+    }
+
+    .jumbotron img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,.9) !important;
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+      margin-bottom: 18px;
+    }
+
+    .jumbotron .display-4 {
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #292929;
+    }
+
+    .jumbotron .lead {
+      color: #555555;
+    }
+
+    .jumbotron a,
+    .jumbotron i {
+      color: #3f3f3f !important;
+    }
+
+    .jumbotron a {
+      text-decoration: none;
+    }
+
+    .jumbotron a:hover {
+      color: #000000 !important;
+    }
+
+    /* ABOUT */
+    .about-section {
+      --dark: #242424;
+      --panel: #303030;
+      --panel-hover: #383838;
+      --silver: #d0d0d0;
+      --muted: #a2a2a2;
+      --line: #484848;
+
+      background:
+        radial-gradient(ellipse at 10% 5%, #414141 0%, transparent 42%),
+        linear-gradient(145deg, #242424, #303030 58%, #262626) !important;
+
+      color: #f2f2f2;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      padding: 90px 0 0 !important;
+    }
+
+    .about-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-label {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #393939;
+      border: 1px solid #555;
+      color: #e0e0e0;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+    }
+
+    .about-title {
+      font-size: clamp(34px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: #f5f5f5;
+    }
+
+    .about-title span {
+      color: #bdbdbd;
+    }
+
+    .about-subtitle {
+      color: #a5a5a5;
+      font-size: 14px;
+      line-height: 1.9;
+      max-width: 520px;
+      margin: 12px auto 0;
+    }
+
+    .about-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #333333, #292929);
+      padding: 32px;
+      border: 1px solid #484848;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.20);
+      transition: transform .35s ease,
+                  border-color .35s ease,
+                  box-shadow .35s ease;
+    }
+
+    .about-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 75px;
+      height: 3px;
+      background: linear-gradient(90deg, #f0f0f0, #777777);
+      border-radius: 0 0 5px 5px;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      border-color: #686868;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-card-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .about-icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #494949, #363636);
+      color: #eeeeee;
+      border: 1px solid #5b5b5b;
+      border-radius: 17px;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .about-card-heading h3 {
+      color: #f1f1f1;
+      font-size: 21px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      letter-spacing: .2px;
+    }
+
+    .about-card-heading p {
+      color: #a3a3a3;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* EDUCATION TIMELINE */
+    .timeline {
+      position: relative;
+      margin-left: 8px;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      bottom: 12px;
+      width: 2px;
+      background: linear-gradient(to bottom, #c5c5c5, #555555);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 34px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -29px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #303030;
+      border: 3px solid #c9c9c9;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 0 0 5px rgba(190, 190, 190, 0.07);
+    }
+
+    .timeline-dot.active {
+      background: #eeeeee;
+      border-color: #eeeeee;
+      box-shadow: 0 0 0 5px rgba(220, 220, 220, 0.12);
+    }
+
+    .timeline-year {
+      display: inline-block;
+      color: #e0e0e0;
+      background: #414141;
+      border: 1px solid #555555;
+      padding: 6px 12px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: .4px;
+    }
+
+    .timeline-content h4 {
+      color: #f0f0f0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 5px;
+    }
+
+    .timeline-content p {
+      color: #b1b1b1;
+      font-size: 14px;
+      margin-bottom: 13px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #e0e0e0;
+      background: #3b4540;
+      border: 1px solid #526057;
+      padding: 7px 11px;
+      border-radius: 50px;
+    }
+
+    .status-badge.ongoing {
+      color: #e5e5e5;
+      background: #414141;
+      border-color: #666666;
+    }
+
+    /* SKILLS */
+    .about-section .skill-box {
+      height: 100%;
+      min-height: 150px;
+      padding: 24px 10px;
+      text-align: center;
+      background: linear-gradient(145deg, #383838, #2e2e2e);
+      border: 1px solid #484848;
+      border-radius: 17px;
+      transition: all .3s ease;
+    }
+
+    .about-section .skill-box:hover {
+      background: linear-gradient(145deg, #444444, #363636);
+      border-color: #999999;
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .about-section .skill-box i {
+      display: block;
+      font-size: 29px;
+      color: #dedede;
+      margin-bottom: 15px;
+      transition: transform .3s ease;
+    }
+
+    .about-section .skill-box:hover i {
+      transform: scale(1.12);
+    }
+
+    .about-section .skill-box h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f0f0f0;
+      margin-bottom: 9px;
+    }
+
+    .about-section .skill-box span {
+      font-size: 10px;
+      color: #a6a6a6;
+      letter-spacing: .5px;
+    }
+
+    .about-wave {
+      display: block;
+      width: 100%;
+      margin-top: 65px;
+      margin-bottom: -1px;
+    }
+
+    .about-wave path {
+      fill: #e7e7e7 !important;
+    }
+
+    /* GALLERY */
+
+
+/* ===== GALLERY SECTION ===== */
+.gallery-section {
+  padding: 90px 0;
+  background: #202020;
+  color: #f1f1f1;
+}
+
+.gallery-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.section-label {
+  color: #a9a9a9;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.gallery-heading h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+}
+
+.gallery-heading p {
+  color: #bdbdbd;
+  line-height: 1.7;
+}
+
+/* ===== LAYOUT CONTROLS ===== */
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.gallery-btn {
+  padding: 9px 17px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  background: transparent;
+  color: #ddd;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.gallery-btn:hover,
+.gallery-btn.active {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #222;
+}
+
+/* ===== GRID LAYOUT ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  align-items: start;
+}
+
+/* ===== GALLERY CARD ===== */
+.gallery-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #292929;
+  border: 1px solid #414141;
+  border-radius: 16px;
+  transition: transform .3s, border-color .3s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: #777;
+}
+
+/* ===== TEXT ABOVE IMAGE ===== */
+.gallery-info {
+  order: 1;
+  width: 100%;
+  padding: 24px;
+}
+
+.gallery-category {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bdbdbd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.gallery-info h3 {
+  margin-bottom: 12px;
+  color: #f5f5f5;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.gallery-info p {
+  margin-bottom: 18px;
+  color: #c0c0c0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.gallery-meta {
+  color: #a9a9a9;
+  font-size: 12px;
+}
+
+/* ===== PORTRAIT SLIDESHOW 9:16 ===== */
+.gallery-slideshow {
+  order: 2;
+  position: relative;
+  width: min(calc(100% - 48px), 320px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #171717;
+  border-radius: 12px;
+}
+
+.gallery-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+
+.gallery-slideshow .slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+/* ===== SLIDESHOW ARROWS ===== */
+.gallery-slideshow .slide-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 50%;
+  background: rgba(25,25,25,.65);
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-slideshow .slide-arrow:hover {
+  background: rgba(80,80,80,.9);
+}
+
+.gallery-slideshow .prev {
+  left: 10px;
+}
+
+.gallery-slideshow .next {
+  right: 10px;
+}
+
+/* ===== COUNTER & DOTS ===== */
+.gallery-slideshow .slide-counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(20,20,20,.7);
+  color: white;
+  font-size: 11px;
+}
+
+.gallery-slideshow .slide-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 12px;
+}
+
+.gallery-slideshow .slide-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.6);
+  cursor: pointer;
+}
+
+.gallery-slideshow .slide-dot.active {
+  width: 17px;
+  border-radius: 10px;
+  background: white;
+}
+
+/* ===== ACHIEVEMENT IMAGES ===== */
+.gallery-photo-grid {
+  order: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding: 0 24px 24px;
+}
+
+.gallery-photo-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  background: #171717;
+}
+
+/* ===== LIST LAYOUT ===== */
+.gallery-grid.gallery-list {
+  grid-template-columns: 1fr;
+}
+
+.gallery-list .gallery-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 280px);
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-list .gallery-info {
+  order: 1;
+}
+
+.gallery-list .gallery-slideshow,
+.gallery-list .gallery-photo-grid {
+  order: 2;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.gallery-list .gallery-photo-grid {
+  padding: 20px;
+}
+
+/* ===== COMPACT LAYOUT ===== */
+.gallery-grid.gallery-compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.gallery-compact .gallery-info {
+  padding: 16px;
+}
+
+.gallery-compact .gallery-info h3 {
+  font-size: 17px;
+}
+
+.gallery-compact .gallery-info p {
+  font-size: 12px;
+}
+
+.gallery-compact .gallery-slideshow {
+  width: calc(100% - 32px);
+  margin-bottom: 16px;
+}
+
+.gallery-compact .gallery-photo-grid {
+  gap: 7px;
+  padding: 0 12px 16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .gallery-grid,
+  .gallery-grid.gallery-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-list .gallery-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 65px 0;
+  }
+
+  .gallery-grid,
+  .gallery-grid.gallery-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-list .gallery-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-list .gallery-slideshow,
+  .gallery-list .gallery-photo-grid,
+  .gallery-grid .gallery-slideshow,
+  .gallery-compact .gallery-slideshow {
+    width: min(calc(100% - 40px), 320px);
+    margin: 0 auto 22px;
+  }
+
+  .gallery-list .gallery-photo-grid,
+  .gallery-grid .gallery-photo-grid,
+  .gallery-compact .gallery-photo-grid {
+    width: 100%;
+    padding: 0 20px 22px;
+  }
+
+  .gallery-info {
+    padding: 20px;
+  }
+
+  .gallery-info h3 {
+    font-size: 19px;
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card,
+  .gallery-slideshow .slide {
+    transition: none;
+  }
+}
+
+/* ===== GALLERY: SILVER THEME ===== */
+.gallery-section {
+  background: linear-gradient(
+    135deg,
+    #f5f5f5 0%,
+    #d5d5d5 55%,
+    #bdbdbd 100%
+  ) !important;
+  color: #292929;
+}
+
+.gallery-heading h2 {
+  color: #292929;
+}
+
+.gallery-heading p,
+.gallery-section .section-label {
+  color: #555555;
+}
+
+/* Tombol Grid, List, Compact */
+.gallery-btn {
+  background: rgba(255, 255, 255, 0.5);
+  color: #333333;
+  border-color: #aaaaaa;
+}
+
+.gallery-btn:hover,
+.gallery-btn.active {
+  background: #292929;
+  color: #ffffff;
+  border-color: #292929;
+}
+
+/* Kartu Travel dan Achievement */
+.gallery-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #c5c5c5;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-card:hover {
+  border-color: #888888;
+}
+
+.gallery-info h3 {
+  color: #292929;
+}
+
+.gallery-info p,
+.gallery-category,
+.gallery-meta {
+  color: #555555;
+}
+
+/* Slideshow */
+.gallery-slideshow {
+  background: #292929;
+}
+
+    /* CONTACT */
+    #contact {
+      background: linear-gradient(180deg, #dedede 0%, #d3d3d3 100%) !important;
+      color: #292929 !important;
+      padding-top: 4.5rem;
+    }
+
+    #contact h2 {
+      font-size: clamp(30px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -.7px;
+    }
+
+    #contact form {
+      max-width: 760px;
+      background: rgba(255,255,255,.58);
+      padding: 28px;
+      border: 1px solid #c8c8c8;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
+      margin-bottom: 2rem;
+    }
+
+    #contact .form-label {
+      color: #333333;
+      font-weight: 650;
+    }
+
+    #contact .form-control {
+      background: #fafafa !important;
+      color: #292929 !important;
+      border: 1px solid #bdbdbd !important;
+      border-radius: 10px;
+      padding: 11px 13px;
+    }
+
+    #contact .form-control:focus {
+      border-color: #666666 !important;
+      box-shadow: 0 0 0 .2rem rgba(70,70,70,.14) !important;
+    }
+
+    #contact .form-text {
+      color: #666666 !important;
+    }
+
+    #contact .btn-primary {
+      background: linear-gradient(135deg, #414141, #626262) !important;
+      border: 1px solid #414141 !important;
+      border-radius: 9px;
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 10px 24px;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    #contact .btn-primary:hover {
+      background: #292929 !important;
+      transform: translateY(-2px);
+    }
+
+    #contact svg path {
+      fill: #dedede !important;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #292929 !important;
+      color: #e5e5e5 !important;
+      padding: 18px 10px !important;
+      border-top: 1px solid #555555;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer a {
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #cfcfcf !important;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 767px) {
+      .jumbotron {
+        padding-top: 7rem !important;
+      }
+
+      #galery {
+        padding: 3.5rem 0;
+      }
+
+      #galery .card-img-top {
+        height: 230px;
+      }
+
+      #contact form {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about-section {
+        padding-top: 65px !important;
+      }
+
+      .about-card {
+        padding: 24px 19px;
+        border-radius: 18px;
+      }
+
+      .about-card-heading {
+        gap: 12px;
+        margin-bottom: 27px;
+      }
+
+      .about-card-heading h3 {
+        font-size: 19px;
+      }
+
+      .about-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+      }
+
+      .timeline-content h4 {
+        font-size: 14px;
+      }
+
+      .timeline-content p {
+        font-size: 13px;
+      }
+
+      .about-section .skill-box {
+        min-height: 135px;
+        padding: 20px 7px;
+      }
+
+      .about-section .skill-box h5 {
+        font-size: 12px;
+      }
+
+      .about-wave {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body id="home">
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark shadow fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="#home">Portofolio</a>
+
+    <!-- Tombol buka/tutup navbar -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Buka atau tutup navigasi">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu navigasi -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#galery">Gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- HOME -->
+  <section class="jumbotron text-center shadow-sm" data-aos="fade-in">
+    <img src="img/Profil.jpg"
+         alt="Foto profil Tito Alfarel"
+         width="200"
+         class="rounded-circle img-thumbnail">
+
+    <h1 class="display-4">Tito Alfarel Shidqi</h1>
+    <p class="lead">Mahasiswa | Hodophile | Orang biasa</p>
+
+    <p>
+      <a href="https://www.instagram.com/titoalfarels/"
+         class="fw-bold me-3">
+        <i class="bi bi-instagram"></i> Instagram
+      </a>
+
+      <a href="https://www.tiktok.com/@alfrl_"
+         class="fw-bold me-3">
+        <i class="bi bi-tiktok"></i> TikTok
+      </a>
+
+      <a href="https://www.youtube.com/@titoalfarels"
+        class="fw-bold me-3">
+        <i class="bi bi-youtube"></i> Channel
+      </a>
+    </p>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container py-4">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="about-label">GET TO KNOW ME</span>
+        <h2 class="about-title mt-2">About <span>Me</span></h2>
+        <p class="about-subtitle">
+          Perjalanan pendidikan, kemampuan, dan hal yang terus saya kembangkan.
+        </p>
+<p></p>
+          <p><b>Hello everyone!</b> My name is Tito Alfarel Shidqi, but you can call me Farel.</p> 
+<p>I am an undergraduate law student at Universitas Negeri Surabaya. I have a strong interest in exploring the relationship between law, society, and justice. Currently, I am developing my critical thinking, communication, and leadership skills experiences. 
+Driven by curiosity and guided by integrity, I am committed to growing both personally and professionally while creating a positive impact on society.</p>
+</div>
+
+      <!-- EDUCATION -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="about-card">
+            <div class="about-card-heading">
+              <div class="about-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+
+              <div>
+                <h3>Education</h3>
+                <p>Perjalanan Pendidikan</p>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                  <span class="timeline-year">2023 — 2026</span>
+                  <h4>SMA Negeri 2 Taruna Pamong Praja Jawa Timur</h4>
+                  <p>IPA Teknik</p>
+
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot active"></div>
+
+                <div class="timeline-content">
+                  <span class="timeline-year">2026 — Sekarang</span>
+                  <h4>Universitas Negeri Surabaya</h4>
+                  <p>S1 Ilmu Hukum</p>
+
+                  <span class="status-badge ongoing">
+                    <i class="bi bi-book-half"></i>
+                    Sedang Menempuh
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="about-card">
+            <div class="about-card-heading">
+              <div class="about-icon">
+                <i class="bi bi-lightning-charge-fill"></i>
+              </div>
+
+              <div>
+                <h3>My Skills</h3>
+                <p>Kemampuan yang saya kembangkan</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <h5>Komunikasi</h5>
+                  <span>Soft Skill</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-people-fill"></i>
+                  <h5>Kerja Tim</h5>
+                  <span>Soft Skill</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-clock-fill"></i>
+                  <h5>Manajemen Waktu</h5>
+                  <span>Soft Skill</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                  <h5>Microsoft Office</h5>
+                  <span>Technical Skill</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-search"></i>
+                  <h5>Analisis</h5>
+                  <span>Critical Thinking</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="skill-box">
+                  <i class="bi bi-shield-check"></i>
+                  <h5>Bertanggung jawab</h5>
+                  <span>Personal Skill</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pengalaman -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="about-card">
+            <div class="about-card-heading">
+              <div class="about-icon">
+                <i class="bi-briefcase-fill"></i>
+              </div>
+
+              <div>
+                <h3>Experience</h3>
+                <p>Pengalaman kerja dan organisasi</p>
+              </div>
+            </div>
+
+      <div class="timeline">
+
+  <!-- PENGALAMAN 1 -->
+     <div class="timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+      <span class="timeline-year">2023 – 2024</span>
+
+      <h4>OSIS MPK SMAN 2 Taruna Pamong Praja Jawa Timur</h4>
+      <p>Anggota Sie. PHBK</p>
+
+      <ul class="experience-list">
+        <li>
+          Memimpin penyelenggaraan peringatan Isra’ Mi’raj 1445 H.
+        </li>
+        <li>
+          Membantu pelaksanaan kegiatan peringatan hari besar
+          keagamaan di sekolah.
+        </li>
+        <li>
+          Bekerja sama dengan panitia dalam persiapan acara
+          dan dokumentasi.
+        </li>
+        <li>
+          Berpartisipasi dalam koordinasi kegiatan organisasi.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PENGALAMAN 2 -->
+  <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+      <span class="timeline-year">2024 – 2025</span>
+
+      <h4>OSIS MPK SMAN 2 Taruna Pamong Praja Jawa Timur</h4>
+      <p>Anggota MPK Komisaris 1 Sie. PHBK</p>
+
+      <ul class="experience-list">
+        <li>
+          Mendukung program kerja bidang keagamaan sekolah.
+        </li>
+        <li>
+          Berkoordinasi dengan anggota organisasi untuk memastikan
+          kegiatan berjalan lancar.
+        </li>
+        <li>
+          Menjalankan tugas kepanitiaan selama kegiatan berlangsung.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PENGALAMAN 3 -->
+     <div class="timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+      <span class="timeline-year">Oktober 2026 – November 2026</span>
+
+      <h4>Magang BEM FH UNESA</h4>
+      <p>Departemen Kajian, Aksi, dan Strategi</p>
+
+      <ul class="experience-list">
+        <li>
+          Berpartisipasi dalam kajian isu-isu hukum dan kemahasiswaan
+          sebagai bahan penyusunan gagasan serta rekomendasi.
+        </li>
+        <li>
+          Mendukung perencanaan strategi dan pelaksanaan aksi mahasiswa
+          yang berkaitan dengan isu hukum dan sosial.
+        </li>
+      </ul>
+    </div>
+   </div>
+</div>
+</div></div></div>
+</div>
+    </div>
+
+    <!-- WAVE ABOUT -->
+    <svg class="about-wave"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1440 200">
+      <path fill="#e7e7e7"
+            d="M0,128L60,138C120,148,240,168,360,154.7C480,141,600,96,720,90.7C840,85,960,117,1080,133.3C1200,149,1320,149,1380,149.3L1440,150L1440,200L0,200Z">
+      </path>
+    </svg>
+  </section>
+
+
+<!-- GALLERY SECTION -->
+<section id="galery" class="gallery-section">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="gallery-heading">
+      <span class="section-label">MY PORTFOLIO</span>
+      <h2>My Gallery</h2>
+      <p>Perjalanan pribadi, pengalaman yang berkesan, dan pencapaian.</p>
+    </div>
+
+    <!-- LAYOUT BUTTONS -->
+    <div class="gallery-controls">
+      <button type="button" class="gallery-btn active"
+        onclick="changeGallery('grid', this)">
+        <i class="bi bi-grid"></i> Grid
+      </button>
+
+      <button type="button" class="gallery-btn"
+        onclick="changeGallery('list', this)">
+        <i class="bi bi-list-ul"></i> List
+      </button>
+
+      <button type="button" class="gallery-btn"
+        onclick="changeGallery('compact', this)">
+        <i class="bi bi-grid-3x3-gap"></i> Compact
+      </button>
+    </div>
+
+    <!-- GALLERY ITEMS -->
+    <div id="galleryItems" class="gallery-grid">
+
+      <!-- TRAVELLING & PHOTOGRAPHY -->
+      <article class="gallery-card">
+
+        <div class="gallery-info">
+          <span class="gallery-category">
+            <i class="bi bi-camera-fill"></i>
+            TRAVELLING & PHOTOGRAPHY
+          </span>
+
+          <h3>Travel & Photography</h3>
+
+          <p>
+            Dokumentasi perjalanan, eksplorasi tempat baru,
+            dan pengalaman yang menjadi bagian dari proses
+            pengembangan diri.
+          </p>
+
+          <div class="gallery-meta">
+            <i class="bi bi-images"></i>
+            Personal Gallery
+          </div>
+        </div>
+
+        <!-- SLIDESHOW -->
+        <div class="gallery-slideshow" data-interval="3000">
+
+          <img src="img/t1.jpeg" alt="Travel photo 1"
+            class="slide active">
+          <img src="img/t2.jpeg" alt="Travel photo 2"
+            class="slide">
+          <img src="img/t3.jpeg" alt="Travel photo 3"
+            class="slide">
+          <img src="img/t4.jpeg" alt="Travel photo 4"
+            class="slide">
+          <img src="img/t5.jpeg" alt="Travel photo 5"
+            class="slide">
+          <img src="img/t6.jpeg" alt="Travel photo 6"
+            class="slide">
+          <img src="img/t7.jpeg" alt="Travel photo 7"
+            class="slide">
+          <img src="img/t8.jpeg" alt="Travel photo 8"
+            class="slide">
+          <img src="img/t9.jpeg" alt="Travel photo 9"
+            class="slide">
+          <img src="img/t10.jpeg" alt="Travel photo 10"
+            class="slide">
+
+          <button type="button" class="slide-arrow prev"
+            aria-label="Foto sebelumnya">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <button type="button" class="slide-arrow next"
+            aria-label="Foto berikutnya">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
+          <div class="slide-counter">1 / 10</div>
+          <div class="slide-dots"></div>
+
+        </div>
+      </article>
+
+      <!-- ACHIEVEMENTS -->
+      <article class="gallery-card">
+
+        <!-- TULISAN DI ATAS GAMBAR -->
+        <div class="gallery-info">
+          <span class="gallery-category">
+            <i class="bi bi-award-fill"></i>
+            ACHIEVEMENT
+          </span>
+
+          <h3>Awards, Licenses & Certifications</h3>
+
+          <p>
+            Dokumentasi pencapaian dan proses pengembangan diri
+            melalui pendidikan, pengalaman, serta berbagai
+            kesempatan untuk belajar.
+          </p>
+
+          <div class="gallery-meta">
+            <i class="bi bi-patch-check-fill"></i>
+            Personal Achievements
+          </div>
+        </div>
+
+        <!-- GAMBAR ACHIEVEMENT -->
+
+<!-- SLIDESHOW ACHIEVEMENT -->
+<div class="gallery-slideshow" data-interval="3000">
+
+  <img src="img/s1.jpeg"
+       alt="Achievement 1"
+       class="slide active">
+
+  <img src="img/s.jpeg"
+       alt="Achievement 2"
+       class="slide">
+
+  <button type="button" class="slide-arrow prev"
+          aria-label="Foto sebelumnya">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <button type="button" class="slide-arrow next"
+          aria-label="Foto berikutnya">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+  <div class="slide-counter">1 / 2</div>
+  <div class="slide-dots"></div>
+
+</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container py-5">
+
+    <!-- HEADER -->
+    <div class="text-center mb-5">
+      <h2 class="mt-3">Contact</h2>
+      <p class="contact-subtitle">
+        Feel free to connect with me.
+      </p>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- EMAIL -->
+      <div class="col-md-5 col-lg-4">
+        <div class="skill-box">
+        <a href="mailto:titoashidqi@gmail.com"
+           class="contact-card text-decoration-none d-block h-100">
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="contact-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+          </div>
+
+          <h4>Email</h4>
+          <span class="contact-link">
+            Send an Email <i class="bi bi-arrow-right"></i>
+          </span>
+        </a>
+        </div>
+      </div>
+
+      <!-- LINKEDIN -->
+      <div class="col-md-5 col-lg-4">
+        <div class="skill-box">
+        <a href="https://id.linkedin.com/in/tito-alfarel-shidqi-b98279432"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-card text-decoration-none d-block h-100">
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="contact-icon">
+              <i class="bi bi-linkedin"></i>
+            </div>
+          </div>
+          <h4>LinkedIn</h4>
+          <span class="contact-link">
+            Visit LinkedIn <i class="bi bi-arrow-right"></i>
+          </span>
+        </a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  
+<!-- LEGAL MOTTO -->
+<section class="text-center py-5" style="background-color: #cecece;">
+  <div class="container">
+
+
+    <h3 class="mt-3 mb-3"
+        style="font-family: Georgia, serif;
+               font-size: clamp(22px, 4vw, 34px);
+               font-weight: 500;
+               font-style: italic;
+               letter-spacing: 1px;
+               color: #292929;">
+      Facta Sunt Potentiora Verbis
+    </h3>
+
+    <div style="width: 45px; height: 1px;
+                background-color: #5f5e5e; margin: 0 auto 18px;">
+    </div>
+
+    <p class="text-muted mb-0"
+       style="font-size: 13px; letter-spacing: 0.5px;">
+      Actions speak louder than words.
+    </p>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <p>
+      © 2026 | Created by
+      <a href="https://www.instagram.com/titoalfarels/"
+         class="fw-bold">@titoalfarels</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Inisialisasi animasi AOS
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  }
+
+  // Fitur layout Grid, List, dan Compact
+  function changeGallery(layout, button) {
+    const gallery = document.getElementById("galleryItems");
+    const buttons = document.querySelectorAll(".gallery-btn");
+
+    if (!gallery) return;
+
+    gallery.classList.remove("gallery-list", "gallery-compact");
+
+    if (layout === "list") {
+      gallery.classList.add("gallery-list");
+    } else if (layout === "compact") {
+      gallery.classList.add("gallery-compact");
+    }
+
+    buttons.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+  }
+
+  // Fitur slideshow otomatis
+  document.querySelectorAll(".gallery-slideshow").forEach(function (slideshow) {
+    const slides = Array.from(slideshow.querySelectorAll(".slide"));
+    const prev = slideshow.querySelector(".prev");
+    const next = slideshow.querySelector(".next");
+    const counter = slideshow.querySelector(".slide-counter");
+    const dotsContainer = slideshow.querySelector(".slide-dots");
+
+    if (slides.length === 0) return;
+
+    let currentIndex = 0;
+    let intervalId;
+
+    // Membuat titik navigasi
+    slides.forEach(function (_, index) {
+      const dot = document.createElement("button");
+
+      dot.type = "button";
+      dot.className = "slide-dot";
+      dot.setAttribute("aria-label", "Tampilkan foto " + (index + 1));
+
+      dot.addEventListener("click", function () {
+        showSlide(index);
+        restartAutoplay();
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll(".slide-dot"));
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("active", i === currentIndex);
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+
+      if (counter) {
+        counter.textContent = (currentIndex + 1) + " / " + slides.length;
+      }
+    }
+
+    function startAutoplay() {
+      if (slides.length <= 1) return;
+
+      const interval = Number(slideshow.dataset.interval) || 3000;
+
+      intervalId = setInterval(function () {
+        showSlide(currentIndex + 1);
+      }, interval);
+    }
+
+    function restartAutoplay() {
+      clearInterval(intervalId);
+      startAutoplay();
+    }
+
+    if (prev) {
+      prev.addEventListener("click", function () {
+        showSlide(currentIndex - 1);
+        restartAutoplay();
+      });
+    }
+
+    if (next) {
+      next.addEventListener("click", function () {
+        showSlide(currentIndex + 1);
+        restartAutoplay();
+      });
+    }
+
+    slideshow.addEventListener("mouseenter", function () {
+      clearInterval(intervalId);
+    });
+
+    slideshow.addEventListener("mouseleave", startAutoplay);
+
+    showSlide(0);
+    startAutoplay();
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>

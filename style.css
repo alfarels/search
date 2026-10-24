@@ -1,0 +1,34 @@
+.jumbotron {
+    padding: 4rem;
+    background-color: #b2b2b2;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+/* Tombol hamburger navbar */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 7px 10px;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Tampilan menu saat dibuka di HP */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 15px 0;
+    margin-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar .nav-link {
+    padding: 10px 5px;
+    margin-left: 0;
+  }
+}
